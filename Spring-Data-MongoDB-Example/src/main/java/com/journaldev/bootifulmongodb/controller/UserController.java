@@ -47,7 +47,7 @@ public class UserController {
 		return userRepository.findOne(userId);
 	}
 
-	//Actual comment removed from here----
+	//Actual comment removed from here----/Comment was here
 
 	@RequestMapping(value = "/settings/{userId}", method = RequestMethod.GET)
 	public Object getAllUserSettings(@PathVariable String userId) {
