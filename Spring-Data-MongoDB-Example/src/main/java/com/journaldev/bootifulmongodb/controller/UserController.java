@@ -47,8 +47,15 @@ public class UserController {
 		return userRepository.findOne(userId);
 	}
 
-
-	//Removed all comments from project
+	// @RequestMapping(value = "/settings/{userId}", method = RequestMethod.GET)
+	// public Object getAllUserSettings(@PathVariable String userId) {
+	// User user = userRepository.findOne(userId);
+	// if (user != null) {
+	// return user.getUserSettings();
+	// } else {
+	// return "User not found.";
+	// }
+	// }
 
 	@RequestMapping(value = "/settings/{userId}", method = RequestMethod.GET)
 	public Object getAllUserSettings(@PathVariable String userId) {
@@ -60,7 +67,7 @@ public class UserController {
 		}
 	}
 
-
+	//Comment removed from here
 
 	@RequestMapping(value = "/settings/{userId}/{key}", method = RequestMethod.GET)
 	public String getUserSetting(@PathVariable String userId, @PathVariable String key) {
